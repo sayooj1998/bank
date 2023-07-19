@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown with Bootstrap</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div>
+         <h1><b><IMG src="{% static 'img/banner.png' %}" alt="banner image" width="1280" height="250"></b></h1>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Yours Bank</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="btn btn-warning" href="{% url 'bankapp:index' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-warning" href="{% url 'bankapp:reg' %}">Registration</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="btn btn-warning" href="{% url 'bankapp:login' %}">Login</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Branches
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kannur">Kannur</a>
+                            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam">Eranakulam</a>
+                            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kozhikode">Kozhikode</a>
+                            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thrissur">Thrissur</a>
+                            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kottayam_district">Kottayam</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+
+<section>
+    <h2 align="center">Welcome to our Bank</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam magna non ultrices aliquam. Nulla facilisi. Nam et convallis sapien.</p>
+  </section>
+
+        <div>
+            <img src="{% static 'img/poster.png' %}" align="middle" width="1280" height="1150">
+        </div>
+
+
+  <footer>
+    &copy; Peoples Bank. All rights reserved.
+  </footer>
+
+    </div>
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<title>bank</title>
+</head>
+<body>
+
+
+
+    <h1>Bank Name</h1>
+
+  <nav>
+    <ul>
+      <li><a href="{% url 'bankapp:index' %}">Home</a></li>
+      <li><a href="{% url 'bankapp:registration' %}">Registration</a></li>
+      <li><a href="{% url 'bankapp:login' %}">Login</a></li>
+      <li class="dropdown">
+                <a href="#" class="dropbtn">Dropdown</a>
+                <div class="dropdown-content">
+                    <!-- Dropdown items -->
+                    <a href="#">Item 1</a>
+                    <a href="#">Item 2</a>
+                </div>
+            </li>
+    </ul>
+  </nav>
+  <section>
+    <h2>Welcome to our Bank</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam magna non ultrices aliquam. Nulla facilisi. Nam et convallis sapien.</p>
+  </section>
+  <footer>
+    &copy; 2023 Bank Name. All rights reserved.
+  </footer>
+
+
+
+</body>
+</html>
